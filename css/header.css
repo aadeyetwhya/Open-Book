@@ -1,0 +1,58 @@
+header {
+    width: 100%;
+    background-color: #354f52;
+    display: flex;
+    justify-content: center
+}
+
+.header {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.86em 0;
+}
+
+.header .rightHeader {
+    text-align: center
+}
+
+.header .rightHeader h1 {
+    color: linear-gradient(135deg, #edf6f9 0%, #cad2c5 100%);
+    font-size: 2.0rem;
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+}
+
+.header .leftHeader .menuHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.header .leftHeader .menuHeader li {
+    font-size: 1.05rem;
+    color: #cad2c5;
+    margin-left: 15px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.header .leftHeader .menuHeader li:hover {
+    color: white;
+}
+
+@media (max-width:700px) {
+    .header {
+        flex-direction: column;
+        gap: 1em;
+
+    }
+
+    .header .leftHeader .menuHeader {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.8em;
+    }
+}
