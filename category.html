@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>OpenBooks - Category</title>
     <link rel="stylesheet" href="./css/basic.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./css/pagination.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
 
 
 </head>
@@ -24,12 +28,12 @@
             <div class="leftHeader">
                 <ul class="menuHeader">
                     <li>Home</li>
-                    <li>Fiction</li>
-                    <li>History</li>
-                    <li>Fantasy</li>
-                    <li>Biography</li>
-                    <li>Mystery</li>
-                    <li>Science</li>
+                    <li onclick="apiData('fiction')">Fiction</li>
+                    <li onclick="apiData('history')">History</li>
+                    <li onclick="apiData('fantasy')">Fantasy</li>
+                    <li onclick="apiData('biography')">Biography</li>
+                    <li onclick="apiData('mystery')">Mystery</li>
+                    <li onclick="apiData('science')">Science</li>
                 </ul>
             </div>
         </div>
@@ -42,17 +46,65 @@
                 <p class="heroDescription">
                     Discover your next favorite book </p>
                 <div class="heroSearch">
-                    <input type="text" class="inputSearch" placeholder="Search by Author, title, or keywords"/>
+                    <input type="text" class="inputSearch" placeholder="Search by Author, title, or keywords" />
                     <button class="submitSearch">
                         Search
                     </button>
                 </div>
             </div>
         </section>
+        <section class="categorySection">
+            <h1 id="here"></h1>
+            <p class="show" id="loading">Loading.........</p>
+            
+            <div class="pagination">
+                <div class="prev page">
+                    &larr;  Prev </div>
+                        <div class="page">
+                            1
+                        </div>
+                        <div class="page">
+                            2
+                        </div>
+                        <div class="page">
+                            3
+                        </div>
+                        <div class="page next">
+                            Next &rarr; 
+                        </div>
+                </div>
+        </section>
     </main>
-    <footer>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <p>Built using <strong>HTML, CSS, JavaScript</strong> and the <a href="https://openbookapi.com"
+                            target="_blank">Open Book API</a> (2025)</p>
+                </div>
 
-    </footer>
+                <div class="footer-links">
+                    <a href=" https://github.com/aadeyetwhya" target="_blank" aria-label="GitHub">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com/in/aditya-kafle-0763311b4" target="_blank" aria-label="LinkedIn">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+                            alt="LinkedIn">
+                    </a>
+                    <a href="mailto:adityakafle@gmail.com" aria-label="Email" target="_blank">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email">
+                    </a>
+                </div>
+
+                <div class="footer-credit">
+                    <p>Designed & Developed by <strong>Aditya Kafle</strong></p>
+                </div>
+            </div>
+
+
+        </footer>
+        <script src="./js/api.js"></script>
+                <script src="./js/category.js"></script>:
+
 </body>
 
 </html>

@@ -1,0 +1,36 @@
+.pagination{
+    width:100%;
+    color:#6a8e7f;
+    display:flex;
+    gap:1em;
+    justify-content: center;
+    margin-top:3em;
+
+}
+.pagination .page{
+    background: transparent;
+    border:1.8px solid #6a8e7f;
+        color:#6a8e7f;
+        font-size: 1rem;
+border-radius: 8px;
+    padding: 0.45rem 1.2rem;       
+     font-weight: 700;
+     cursor: pointer;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+
+}
+.pagination .page:hover{
+    background-color: #6a8e7f;
+    color:white
+}
+@media(max-width:600px){
+    .pagination{
+gap:0.7em
+    }
+    .pagination .page{
+                font-size: 0.7rem;
+
+    }
+}

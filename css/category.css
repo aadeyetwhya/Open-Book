@@ -1,0 +1,108 @@
+.categorySection {
+
+    background-color: #f9f7f1;
+    padding: 2em 0.5em 4em 0.5em;
+
+}
+
+.categorySection h1 {
+    color: #34523e;
+
+    padding: 0em 0 1.4em 10rem;
+
+}
+
+.category {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em
+}
+
+.category .card {
+    background-color: white;
+    width: 25%;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 1em
+}
+
+.category .card:hover {
+    box-shadow: 1px 5px 9px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+.category .card .image {
+    aspect-ratio: 2 / 3;
+    width: 100%;
+
+    background-size: cover;
+
+
+}
+
+.category .card .bookInfo {
+    background-attachment: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    padding: 1.1em;
+}
+
+.category .card .bookInfo .title {
+    color: #34523e;
+}
+
+.category .card .bookInfo .author {
+    color: black;
+    text-decoration: italic;
+}
+
+.category .card .bookInfo .year {
+    color: black;
+}
+
+.category .card .bookInfo .description {
+    color: black;
+}
+
+@media(min-width:301px) and (max-width:600px) {
+    .category {
+        gap: 1.1em;
+    }
+
+    .categorySection h1 {
+        text-align: center;
+        padding: 0em 0 1.5em 0
+    }
+
+    .category .card {
+        width: 47%;
+    }
+
+    .category .card .bookInfo {
+        padding: 0.6em;
+        gap: 0.7em;
+
+
+    }
+
+    .category .card .bookInfo .title {
+        font-size: 1.4rem;
+    }
+
+    .category .card .bookInfo .author {
+        font-size: 0.9rem
+    }
+
+    .category .card .bookInfo .description {
+        font-size: 0.7rem
+    }
+
+}
+
+@media(max-width:300px) {
+    .category .card {
+        width: 80%;
+    }
+}
