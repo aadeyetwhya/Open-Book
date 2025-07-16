@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="./css/category.css">
     <link rel="stylesheet" href="./css/pagination.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/error.css">
+        <link rel="stylesheet" href="./css/loading.css">
+
+
 
 
 
@@ -27,18 +31,20 @@
             </div>
             <div class="leftHeader">
                 <ul class="menuHeader">
-                    <li onclick="apiData({category:'general'})">Home</li>
-                    <li onclick="apiData({category:'fiction'})">Fiction</li>
-                    <li onclick="apiData({category:'romance'})">Romance</li>
-                    <li onclick="apiData({category:'fantasy'})">Fantasy</li>
-                    <li onclick="apiData({category:'biography'})">Biography</li>
-                    <li onclick="apiData({category:'mystery'})">Mystery</li>
-                    <li onclick="apiData({category:'science'})">Science</li>
+                    <a ><li onclick="apiData({category:'general'})">Home</li></a>
+                    <a><li onclick="apiData({category:'fiction'})">Fiction</li></a>
+                    <a ><li onclick="apiData({category:'romance'})">Romance</li></a>
+                    <a><li onclick="apiData({category:'fantasy'})">Fantasy</li></a>
+                    <a ><li onclick="apiData({category:'technology'})">Technology</li></a>
+                    <a ><li onclick="apiData({category:'mystery'})">Mystery</li></a>
+                   <a ><li onclick="apiData({category:'science'})">Science</li></a>
                 </ul>
             </div>
         </div>
     </header>
     <main>
+        
+
         <section>
             <div class="hero">
                 <h1 class="heroTitle">
@@ -55,7 +61,7 @@
         </section>
         <section class="categorySection">
             <h1 id="here"></h1>
-            <p class="show" id="loading">Loading.........</p>
+            <p class="show loading" id="loading">Loading  &nbsp;<span class="dots"></span></p>
 
             <div class="pagination">
                 <div class="prev page" onclick="changePageSlot(-1)">
@@ -79,7 +85,7 @@
         <div class="footer-container">
             <div class="footer-about">
                 <p>Built using <strong>HTML, CSS, JavaScript</strong> and the <a href="https://openbookapi.com"
-                        target="_blank">Open Book API</a> (2025)</p>
+                        target="_blank">Google Book API</a> (2025)</p>
             </div>
 
             <div class="footer-links">
@@ -101,11 +107,13 @@
 
 
     </footer>
+    <script src="./js/error.js"></script>
     <script src="./js/api.js"></script>
-        <script src="./js/search.js"></script>
+    <script src="./js/search.js"></script>
 
-    <script src="./js/category.js"></script>    
+    <script src="./js/category.js"></script>
     <script src="./js/pagination.js"></script>
+
 
 
 </body>

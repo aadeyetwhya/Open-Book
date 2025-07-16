@@ -3,7 +3,7 @@ header {
     background-color: #354f52;
     display: flex;
     justify-content: center;
-    position:fixed;
+    /* position:fixed; */
 }
 
 .header {
