@@ -3,13 +3,10 @@ const categoryList = (booksLists) => {
     let seletedElement = document.querySelector('#here');
 
   //  Remove previously added .category section if it exists
-    const oldCategory = document.querySelector('.category');
-    if (oldCategory) {
-        oldCategory.remove();
-    }
+    
     let newCardList = document.createElement('div');
 
-
+    console.log(booksLists,"booklist");
 
     newCardList.className = 'category';
     seletedElement.after(newCardList)
@@ -24,24 +21,29 @@ const categoryList = (booksLists) => {
 
 const categoryCard = (eachBook, selectedElement) => {
 
-    
+    const thumbnail = eachBook?.volumeInfo?.imageLinks?.thumbnail 
+    || 'https://tse4.mm.bing.net/th/id/OIP.yzJN4S5Olv5FVAGvlUzoYQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3';
+
     let newCard = document.createElement('div');
     newCard.className = 'card';
     newCard.innerHTML = ` 
-                    <img src="https://covers.openlibrary.org/b/id/${eachBook.cover_id}.jpg" alt="" class="image">
+    <div class="book-image">
+                    <img src="${thumbnail}" alt="" class="image">
+                      </div>
                     <div class="bookInfo">
+                        
                         <h2 class="title">
-                            ${eachBook.title}
+                            ${eachBook.volumeInfo.title}
                         </h2>
 
                        <i> <p class="author">
-                            ${eachBook.authors[0].name}
+                            ${eachBook.volumeInfo.authors.map(eachAuthor=> eachAuthor).join(" , ") }
                         </p></i>
                         <p class="year">
-                            ${eachBook.first_publish_year}
+                            ${eachBook.volumeInfo.publishedDate}
                         </p>
                         <p class="description">
-                            ${eachBook.subject.map(eachSubject=>eachSubject).slice(0,3)}
+                            ${eachBook.volumeInfo.description?.slice(0,180)+"..."}
                         </p>
                 </div>`
     

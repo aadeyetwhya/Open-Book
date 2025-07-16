@@ -24,12 +24,23 @@
     background-color: white;
     width: 25%;
     box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 1em
+    border-radius: 1em;
+     background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+    
 }
 
 .category .card:hover {
     box-shadow: 1px 5px 9px 3px rgba(0, 0, 0, 0.2);
 
+}
+.book-card {
+ width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .category .card .image {
@@ -45,7 +56,7 @@
     background-attachment: white;
     display: flex;
     flex-direction: column;
-    gap: 1.2em;
+    gap: 1.0em;
     padding: 1.1em;
 }
 
@@ -60,10 +71,12 @@
 
 .category .card .bookInfo .year {
     color: black;
+    font-size: medium;
 }
 
 .category .card .bookInfo .description {
     color: black;
+    font-size: 14.1px;
 }
 
 @media(min-width:301px) and (max-width:600px) {

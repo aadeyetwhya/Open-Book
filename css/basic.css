@@ -4,14 +4,24 @@
     color:#cad2c5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
+  
+
 }
 
 .hide{
-    display:none;
+    display: none !important;
 }
 
 .show{
     display:block;
     font-size: larger;
     color:#2c3e3f; 
+}
+
+.disabled{
+   pointer-events: none;     
+  opacity: 0.5;             
+  cursor: not-allowed;      
+  color: #a0b0a5;          
+  border-color: #a0b0a5;  
 }

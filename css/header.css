@@ -2,7 +2,8 @@ header {
     width: 100%;
     background-color: #354f52;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    position:fixed;
 }
 
 .header {

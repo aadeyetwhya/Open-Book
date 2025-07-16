@@ -27,13 +27,13 @@
             </div>
             <div class="leftHeader">
                 <ul class="menuHeader">
-                    <li>Home</li>
-                    <li onclick="apiData('fiction')">Fiction</li>
-                    <li onclick="apiData('history')">History</li>
-                    <li onclick="apiData('fantasy')">Fantasy</li>
-                    <li onclick="apiData('biography')">Biography</li>
-                    <li onclick="apiData('mystery')">Mystery</li>
-                    <li onclick="apiData('science')">Science</li>
+                    <li onclick="apiData({category:'general'})">Home</li>
+                    <li onclick="apiData({category:'fiction'})">Fiction</li>
+                    <li onclick="apiData({category:'romance'})">Romance</li>
+                    <li onclick="apiData({category:'fantasy'})">Fantasy</li>
+                    <li onclick="apiData({category:'biography'})">Biography</li>
+                    <li onclick="apiData({category:'mystery'})">Mystery</li>
+                    <li onclick="apiData({category:'science'})">Science</li>
                 </ul>
             </div>
         </div>
@@ -47,7 +47,7 @@
                     Discover your next favorite book </p>
                 <div class="heroSearch">
                     <input type="text" class="inputSearch" placeholder="Search by Author, title, or keywords" />
-                    <button class="submitSearch">
+                    <button class="submitSearch" onclick="search()">
                         Search
                     </button>
                 </div>
@@ -56,54 +56,57 @@
         <section class="categorySection">
             <h1 id="here"></h1>
             <p class="show" id="loading">Loading.........</p>
-            
+
             <div class="pagination">
-                <div class="prev page">
-                    &larr;  Prev </div>
-                        <div class="page">
-                            1
-                        </div>
-                        <div class="page">
-                            2
-                        </div>
-                        <div class="page">
-                            3
-                        </div>
-                        <div class="page next">
-                            Next &rarr; 
-                        </div>
+                <div class="prev page" onclick="changePageSlot(-1)">
+                    &larr; Prev </div>
+                <div class="page pageno" id="1" onclick="switchPage(event)">
+                    1
                 </div>
-        </section>
-    </main>
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-about">
-                    <p>Built using <strong>HTML, CSS, JavaScript</strong> and the <a href="https://openbookapi.com"
-                            target="_blank">Open Book API</a> (2025)</p>
+                <div class="page pageno" id="2" onclick="switchPage(event)">
+                    2
                 </div>
-
-                <div class="footer-links">
-                    <a href=" https://github.com/aadeyetwhya" target="_blank" aria-label="GitHub">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
-                    </a>
-                    <a href="https://linkedin.com/in/aditya-kafle-0763311b4" target="_blank" aria-label="LinkedIn">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
-                            alt="LinkedIn">
-                    </a>
-                    <a href="mailto:adityakafle@gmail.com" aria-label="Email" target="_blank">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email">
-                    </a>
+                <div class="page pageno" id="3" onclick="switchPage(event)">
+                    3
                 </div>
-
-                <div class="footer-credit">
-                    <p>Designed & Developed by <strong>Aditya Kafle</strong></p>
+                <div class="page next" onclick="changePageSlot(1)">
+                    Next &rarr;
                 </div>
             </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <p>Built using <strong>HTML, CSS, JavaScript</strong> and the <a href="https://openbookapi.com"
+                        target="_blank">Open Book API</a> (2025)</p>
+            </div>
+
+            <div class="footer-links">
+                <a href=" https://github.com/aadeyetwhya" target="_blank" aria-label="GitHub">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+                </a>
+                <a href="https://linkedin.com/in/aditya-kafle-0763311b4" target="_blank" aria-label="LinkedIn">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="mailto:adityakafle@gmail.com" aria-label="Email" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email">
+                </a>
+            </div>
+
+            <div class="footer-credit">
+                <p>Designed & Developed by <strong>Aditya Kafle</strong></p>
+            </div>
+        </div>
 
 
-        </footer>
-        <script src="./js/api.js"></script>
-                <script src="./js/category.js"></script>:
+    </footer>
+    <script src="./js/api.js"></script>
+        <script src="./js/search.js"></script>
+
+    <script src="./js/category.js"></script>    
+    <script src="./js/pagination.js"></script>
+
 
 </body>
 
