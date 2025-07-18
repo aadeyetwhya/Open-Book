@@ -1,63 +1,68 @@
 # Book Browser App
 
-A responsive, real-time book browsing and search web application using the **Google Books API**. Built with **HTML**, **CSS**, and **Vanilla JavaScript**, this app allows users to explore books by genre, perform keyword-based searches, and navigate results with intuitive pagination.
+The **Book Browser App** is a fully responsive, frontend web application built with **HTML**, **CSS**, and **Vanilla JavaScript** using the **Google Books API**. This project started as a **practice project** to explore real-world application of DOM manipulation, API integration, and UI responsiveness — but it's also completely functional and usable.
+
+Users can **search for books** by title, author, or keywords, or **filter by genre** to explore books in different categories. Each result provides key details including the book’s title, author(s), short description, and publication year.
+
+This project demonstrates core web development concepts like **dynamic rendering**, **error handling**, **template-based DOM updates**, and **API consumption** — while providing a smooth user experience.
 
 ---
 
 ## Features
 
-### Real-Time Search
+### **Real-Time Search**
 - Search books by **title**, **author**, or **keywords**
-- Results fetched live from the Google Books API
+- Results fetched live and updated in real-time from the Google Books API
 
-### Genre Filtering
-- Filter books dynamically based on selected genre
-- Automatically updates the visible book cards
+### **Genre Filtering**
+- Select from a set of predefined genres (e.g., Fiction, Science, History)
+- Automatically filters and updates displayed books
 
-### Book Cards
-Each card includes:
-- Book Title
-- Author(s)
-- Short Description
-- Year of Publication
+### **Detailed Book Cards**
+Each book card shows:
+- **Book Title**
+- **Author(s)**
+- **Short Description**
+- **Published Year**
 
-### Pagination
-- 9 books per page
-- Pages shown in blocks of 3 for cleaner UI
-- Active page indicator and smooth navigation
+### **Pagination**
+- Displays **9 books per page**
+- Pages grouped in **3-page blocks** for improved clarity
+- Highlights active page and enables smooth transitions
 
-### Responsive Design
-- Optimized for mobile, tablet, and desktop
-- Built using only Vanilla CSS (no frameworks)
+### **Responsive Design**
+- Works seamlessly across desktops, tablets, and smartphones
+- No external CSS frameworks used — built with pure CSS
 
-### Performance Improvements
-- DOM updates grouped using template literals
-- Minimal reflows and repaints
-- Robust error handling for API and edge cases
+### **Performance Optimization**
+- DOM rendering done using **template literals** for flexibility
+- Grouped DOM updates reduce reflow and repaint operations
+- Graceful handling of missing data and API errors
 
 ---
 
 ## Technologies Used
 
-- HTML
-- CSS (Vanilla)
-- JavaScript (Vanilla)
-- Google Books API
+- **HTML** – Page structure  
+- **CSS (Vanilla)** – Custom styling and layout  
+- **JavaScript (Vanilla)** – Application logic and API integration  
+- **Google Books API** – Source for book data
 
 ---
 
-## Concepts and Techniques
+## Key Concepts and Techniques
 
-- DOM injection via template literals
-- Grouped DOM updates for performance
-- API error handling and edge case fallback
-- Clean modular functions for clarity and reuse
+- Real-time search and filtering using API queries
+- DOM injection using JavaScript template literals
+- Handling edge cases (missing fields, empty results, API errors)
+- Pagination logic and performance-focused DOM updates
+- Fully responsive layout without using CSS frameworks
 
 ---
 
 ## Getting Started
 
-### Clone the Repository
+### **Clone the Repository**
 
 ```bash
 git clone https://github.com/yourusername/book-browser-app.git
