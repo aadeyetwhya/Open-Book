@@ -1,6 +1,6 @@
-# Book Browser App
+# OpemBook- A book browsing App
 
-The **Book Browser App** is a fully responsive, frontend web application built with **HTML**, **CSS**, and **Vanilla JavaScript** using the **Google Books API**. This project started as a **practice project** to explore real-world application of DOM manipulation, API integration, and UI responsiveness — but it's also completely functional and usable.
+The **Open Book** is a fully responsive, frontend web application built with **HTML**, **CSS**, and **Vanilla JavaScript** using the **Google Books API**. This project started as a **practice project** to explore real-world application of DOM manipulation, API integration, and UI responsiveness — but it's also completely functional and usable.
 
 Users can **search for books** by title, author, or keywords, or **filter by genre** to explore books in different categories. Each result provides key details including the book’s title, author(s), short description, and publication year.
 
